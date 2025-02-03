@@ -1,0 +1,63 @@
+<div class="m-4 container">
+  <div class="row">
+    <div class="my-2">
+      <button routerLink="/add" class="btn btn-success">Add Patient</button>
+      <button  class="btn btn-danger mx-4" >Remove Patient</button>
+    </div>
+  </div>
+  <div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Memory Care</th>
+        <th scope="col">Guardian</th>
+        <th scope="col">Actions</th>
+
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>hello</td>
+        <td>
+          <a class="mx-2" ><i class="bi bi-eye"></i></a>
+          <a class="mx-2"><i class="bi bi-pencil-square" style="color: #ffc107"></i></a>
+          <a class="mx-2"><i class="bi bi-trash" style="color: #e34724"></i> </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        <td>hello</td>
+        <td>
+          <a class="mx-2" ><i class="bi bi-eye"></i></a>
+          <a class="mx-2"><i class="bi bi-pencil-square" style="color: #ffc107"></i></a>
+          <a class="mx-2"><i class="bi bi-trash" style="color: #e34724"></i> </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+        <td>hello</td>
+        <td>
+          <a class="mx-2" ><i class="bi bi-eye"></i></a>
+          <a class="mx-2"><i class="bi bi-pencil-square" style="color: #ffc107"></i></a>
+          <a class="mx-2"><i class="bi bi-trash" style="color: #e34724"></i> </a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<router-outlet></router-outlet>
