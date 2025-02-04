@@ -1,9 +1,10 @@
 import {Patient} from './patient.model'
 
 export interface Guardian{
-  id: number;
+  id?: number;
   firstName?: string;
   lastName?: string;
-  memoryCare?: boolean;
-  guardians?: Guardian[];
+  address?: string;
+  phone?: string
+  guardians?: Patient[];
 }

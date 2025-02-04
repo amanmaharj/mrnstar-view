@@ -5,16 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PatientListComponent } from './patient-list/patient-list.component';
 import { PatientAddComponent } from './patient-add/patient-add.component';
+import { GuardianAddComponent } from './guardian-add/guardian-add.component';
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     PatientListComponent,
-    PatientAddComponent
+    PatientAddComponent,
+    GuardianAddComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
