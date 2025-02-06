@@ -2,12 +2,17 @@
   <div class="row">
     <div class="my-2">
       <button routerLink="/add-patient" class="btn btn-success">Add Patient</button>
-      <button  routerLink="/add-guardian" class="btn btn-danger mx-4" >Add Guardian</button>
+      <button  routerLink="/add-guardian" class="btn btn-success mx-4" >Add Guardian</button>
+      <button  routerLink="/guardian" class="btn btn-primary"  >Show List of Guardian</button>
     </div>
   </div>
   <div>
     <table class="table table-striped">
-      <thead>
+
+      <thead class="table-primary">
+      <tr>
+        <th colspan="6" class="fs-4">List of Patients</th>
+      </tr>
       <tr>
         <th scope="col">#</th>
         <th scope="col">First Name</th>
@@ -27,9 +32,8 @@
         <td>{{data.memoryCare}}</td>
         <td>{{data.guardians}}</td>
         <td>
-          <a class="mx-2" ><i class="bi bi-eye"></i></a>
-          <a class="mx-2"><i class="bi bi-pencil-square" style="color: #ffc107"></i></a>
-          <a class="mx-2"><i class="bi bi-trash" style="color: #e34724"></i> </a>
+          <a class="mx-2"><i class="bi bi-pencil-square" style="color: #ffc107" routerLink="/update-patient/{{data.id}}/update-guardian"></i></a>
+          <a class="mx-2"><i class="bi bi-trash" style="color: #e34724" (click)="deleteById(data.id)"></i> </a>
         </td>
       </tr>
       </tbody>
