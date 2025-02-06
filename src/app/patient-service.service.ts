@@ -19,8 +19,16 @@ export class PatientServiceService {
     return this.http.post(baseUrl, data);
   }
 
-  getById(): Observable<Patient> {
-    return this.http.get<Patient>(`${baseUrl}/getById`)
+
+  deleteById(id: any): Observable<any>{
+    return this.http.delete(`${baseUrl}/delete/${id}`);
   }
 
+  showByID(id: any): Observable<Patient> {
+    return this.http.get<Patient>(`${baseUrl}/patient/${id}`);
+  }
+
+  updatePatient(id: any, data: any): Observable<any>{
+    return this.http.put<any>(`${baseUrl}/update-patient/${id}/update-guardian`, data);
+  }
 }

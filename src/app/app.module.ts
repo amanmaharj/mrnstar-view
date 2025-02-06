@@ -8,13 +8,17 @@ import { PatientAddComponent } from './patient-add/patient-add.component';
 import { GuardianAddComponent } from './guardian-add/guardian-add.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import { GuardianListComponent } from './guardian-list/guardian-list.component';
+import { PatientEditComponent } from './patient-edit/patient-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PatientListComponent,
     PatientAddComponent,
-    GuardianAddComponent
+    GuardianAddComponent,
+    GuardianListComponent,
+    PatientEditComponent
   ],
   imports: [
     BrowserModule,

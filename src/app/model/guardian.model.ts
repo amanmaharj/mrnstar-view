@@ -6,5 +6,5 @@ export interface Guardian{
   lastName?: string;
   address?: string;
   phone?: string
-  guardians?: Patient[];
+  patients?: Patient[];
 }

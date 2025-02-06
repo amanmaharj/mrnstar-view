@@ -12,7 +12,7 @@ export class GuardianAddComponent {
   guardian : Guardian = {
     firstName : "",
     lastName : "",
-    guardians : [],
+    patients : [],
     address : "",
     phone : ""
   }
@@ -27,7 +27,7 @@ export class GuardianAddComponent {
      lastName: this.guardian.lastName,
      address: this.guardian.address,
      phone: this.guardian.phone,
-     guardians: this.guardian.guardians
+     patients: this.guardian.patients
    }
 
    this.guardianService.saveGuardian(data).subscribe({
@@ -46,7 +46,7 @@ export class GuardianAddComponent {
     this.guardian.firstName = ''
     this.guardian.lastName = ''
     this.guardian.phone = ''
-    this.guardian.guardians = []
+    this.guardian.patients = []
     this.guardian.phone = ''
 
   }

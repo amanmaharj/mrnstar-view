@@ -1,6 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {Patient} from "../model/patient.model";
 import {PatientServiceService} from "../patient-service.service";
+import {GuardianListComponent} from "../guardian-list/guardian-list.component";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-patient-list',
@@ -20,7 +22,7 @@ export class PatientListComponent implements OnInit{
   ngOnInit(): void {
     this.getAllPatients()
   }
-  constructor(private patientService: PatientServiceService) {
+  constructor(private patientService: PatientServiceService, private router: Router) {
   }
   getAllPatients(): void {
     this.patientService.getAll().subscribe({
@@ -33,13 +35,27 @@ export class PatientListComponent implements OnInit{
 
   }
 
-  getPatientById(): void{
-    this.patientService.getById().subscribe({
-      next: (data) => {
-        this.currentPatient = data;
+  deleteById(id: any): void {
+    this.patientService.deleteById(id).subscribe({
+      next: (data)=>{
+
         console.log(data);
+        this.getAllPatients();
+
+
       },
-      error: (e) => console.log(e)
+      error: (e)=>{
+        console.log(e);
+        this.getAllPatients();
+      }
     })
   }
+
+
+  @ViewChild(GuardianListComponent) guar!: GuardianListComponent;
+
+  callListComponent(){
+    this.guar.getAllGuardians();
+  }
+
 }
