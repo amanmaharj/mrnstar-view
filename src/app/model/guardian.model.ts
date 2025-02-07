@@ -1,7 +1,7 @@
 import {Patient} from './patient.model'
 
 export interface Guardian{
-  id?: number;
+  g_id?: number;
   firstName?: string;
   lastName?: string;
   address?: string;

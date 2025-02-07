@@ -9,6 +9,7 @@ import {Guardian} from "./model/guardian.model";
 export class GuardianServiceService {
   url = "http://localhost:8080/v1/morningstar/guardian";
 
+
   constructor(private http: HttpClient) { }
 
   saveGuardian(data: any): Observable<any>{
@@ -17,6 +18,18 @@ export class GuardianServiceService {
 
   showAll(): Observable<Guardian[]>{
     return this.http.get<Guardian[]>(this.url);
+  }
+
+  updateGuardian(g_id: any, data: any): Observable<any>{
+    return this.http.put(`${this.url}/${g_id}/update-parent`, data)
+  }
+
+  getGuardian(g_id: any): Observable<any>{
+    return this.http.get<any>(`${this.url}/unique-guardian/${g_id}`)
+  }
+
+  deleteGuardian(g_id: any): Observable<any>{
+    return this.http.delete(`${this.url}/delete/${g_id}`)
   }
 
 
