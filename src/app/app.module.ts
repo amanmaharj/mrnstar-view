@@ -10,6 +10,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import { GuardianListComponent } from './guardian-list/guardian-list.component';
 import { PatientEditComponent } from './patient-edit/patient-edit.component';
+import {GuardianEditComponent} from "./guardian-edit/guardian-edit.component";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PatientEditComponent } from './patient-edit/patient-edit.component';
     PatientAddComponent,
     GuardianAddComponent,
     GuardianListComponent,
-    PatientEditComponent
+    PatientEditComponent,
+    GuardianEditComponent
   ],
   imports: [
     BrowserModule,

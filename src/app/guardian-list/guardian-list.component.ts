@@ -29,4 +29,17 @@ ngOnInit(): void {
       }
     })
   }
+
+  deleteGuardian(g_id: any): void{
+  this.guardianService.deleteGuardian(g_id).subscribe({
+    next: (data)=>{
+      console.log(data);
+      this.getAllGuardians();
+    },
+    error: (er)=>{
+      console.log(er);
+      this.getAllGuardians();
+    }
+  })
+  }
 }
